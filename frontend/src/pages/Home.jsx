@@ -141,7 +141,7 @@ export const Home = () => {
                 >
                   {isVideo ? (
                     <video
-                      src={`http://192.168.164.237:8000/${item.name}`}
+                      src={`https://gallery-local.onrender.com//${item.name}`}
                       controls
                       style={{
                         width: '300px',
@@ -158,7 +158,7 @@ export const Home = () => {
                     <div className="image-container">
 
                       <LazyLoadImage
-                        src={`http://192.168.164.237:8000/${item.name}`}
+                        src={`https://gallery-local.onrender.com//${item.name}`}
                         alt="Gallery"
                         effect="blur" // Adds a blur effect while loading
                         style={{
@@ -176,7 +176,7 @@ export const Home = () => {
                           if (userConfirmed) {
                             try {
                               // Fetch the image as a blob
-                              const response = await fetch(`http://192.168.164.237:8000/${item.name}`);
+                              const response = await fetch(`https://gallery-local.onrender.com//${item.name}`);
                               const blob = await response.blob();
 
                               // Create a temporary link for downloading the blob
@@ -249,7 +249,7 @@ export const Home = () => {
               <div className="modal-body text-center">
                 {/\.(mp4|webm|ogg)$/i.test(selectedImage.name) ? ( // Check if the file is a video
                   <video
-                    src={`http://192.168.164.237:8000/${selectedImage.name}`}
+                    src={`https://gallery-local.onrender.com//${selectedImage.name}`}
                     controls
                     className="img-fluid rounded"
                     style={{
@@ -263,7 +263,7 @@ export const Home = () => {
                   </video>
                 ) : (
                   <img
-                    src={`http://192.168.164.237:8000/${selectedImage.name}`}
+                    src={`https://gallery-local.onrender.com//${selectedImage.name}`}
                     alt="Selected"
                     className="img-fluid rounded"
                     style={{

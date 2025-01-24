@@ -6,7 +6,7 @@ const initialValues = { images: [], categories: [] };
 export const getAllImages = createAsyncThunk(
   "images/fetchallimages",
   async () => {
-    const response = await axios.get("http://192.168.164.237:8000/api/v1/get/images");
+    const response = await axios.get("https://gallery-local.onrender.com//api/v1/get/images");
     // console.log(response);
 
     return response.data.fetchAllImages;
@@ -16,7 +16,7 @@ export const getAllCategories = createAsyncThunk(
   "categories/fetchallcategories",
   async () => {
     const response = await axios.get(
-      "http://192.168.164.237:8000/api/v1/get/categories"
+      "https://gallery-local.onrender.com//api/v1/get/categories"
     );
     // console.log(response);
 
@@ -27,7 +27,7 @@ export const postNewCategory = createAsyncThunk(
   "categories/postnewcategory",
   async (payload) => {
     const response = await axios.post(
-      "http://192.168.164.237:8000/api/v1/add/category",
+      "https://gallery-local.onrender.com//api/v1/add/category",
       { name: payload }
     );
     // console.log(response);
@@ -40,7 +40,7 @@ export const postNewImage = createAsyncThunk(
   async (payload) => {
     try {
       const response = await axios.post(
-        "http://192.168.164.237:8000/api/v1/upload/images", // Updated endpoint for multiple images
+        "https://gallery-local.onrender.com//api/v1/upload/images", // Updated endpoint for multiple images
         payload,
         {
           headers: {
@@ -62,7 +62,7 @@ export const getSingleImage = createAsyncThunk(
   "categories/getsingleimage",
   async (payload) => {
     const response = await axios.get(
-      `http://192.168.164.237:8000/api/v1/get/singleImage?category=${payload}`
+      `https://gallery-local.onrender.com//api/v1/get/singleImage?category=${payload}`
     );
     console.log(response);
 
