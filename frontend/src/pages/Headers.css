@@ -1,0 +1,28 @@
+/* Sliding effect for navbar collapse */
+.sliding-collapse {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.sliding-collapse.expanded {
+    max-height: 500px; /* Adjust based on the content's height */
+    opacity: 1;
+}
+
+.sliding-collapse.collapsed {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Ensure buttons take full width on small screens */
+.nav-item .btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) and (max-width: 991px) {
+    .exp {
+        display: none;
+    }
+}
