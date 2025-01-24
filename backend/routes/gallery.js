@@ -11,6 +11,12 @@ import multer from "multer";
 
 const router = express.Router();
 
+
+const uploadFolder = "public/upload/";
+if (!fs.existsSync(uploadFolder)) {
+  fs.mkdirSync(uploadFolder, { recursive: true }); // Create the folder, including parent directories
+}
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "public/upload/");
