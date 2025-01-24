@@ -8,6 +8,7 @@ import {
   // uploadImages,
 } from "../controllers/galleryController.js";
 import multer from "multer";
+import fs from "fs"
 
 const router = express.Router();
 
