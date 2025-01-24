@@ -141,7 +141,7 @@ export const Home = () => {
                 >
                   {isVideo ? (
                     <video
-                      src={`https://gallery-local.onrender.com//${item.name}`}
+                      src={`https://gallery-local.onrender.com/${item.name}`}
                       controls
                       style={{
                         width: '300px',
@@ -158,7 +158,7 @@ export const Home = () => {
                     <div className="image-container">
 
                       <LazyLoadImage
-                        src={`https://gallery-local.onrender.com//${item.name}`}
+                        src={`https://gallery-local.onrender.com/${item.name}`}
                         alt="Gallery"
                         effect="blur" // Adds a blur effect while loading
                         style={{
@@ -176,7 +176,7 @@ export const Home = () => {
                           if (userConfirmed) {
                             try {
                               // Fetch the image as a blob
-                              const response = await fetch(`https://gallery-local.onrender.com//${item.name}`);
+                              const response = await fetch(`https://gallery-local.onrender.com/${item.name}`);
                               const blob = await response.blob();
 
                               // Create a temporary link for downloading the blob
